@@ -39,10 +39,14 @@ def print_folder_structure(path: Path, tab_count: int = 0) -> None:
         print(f"{Fore.RED}Permission denied: {path}{Fore.RESET}")
 
 
-try:
-    directory = Path(sys.argv[1])
-except IndexError:
-    directory = Path(__file__).parent
-    print(f"{Fore.YELLOW}No path provided. Using: {directory}{Fore.RESET}")
+def main():
+    try:
+        directory = Path(sys.argv[1])
+    except IndexError:
+        directory = Path(__file__).parent
+        print(f"{Fore.YELLOW}No path provided. Using: {directory}{Fore.RESET}")
 
-print_folder_structure(directory)
+    print_folder_structure(directory)
+
+if __name__ == "__main__":
+    main()

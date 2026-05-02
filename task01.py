@@ -41,6 +41,9 @@ def total_salary(path: str) -> tuple[int, float]:
 
     return total, average
 
+def main():
+    total, average = total_salary("salary_file.txt")
+    print(f"Загальна сума заробітної плати: {total}, Середня заробітна плата: {average}")
 
-total, average = total_salary("salary_file.txt")
-print(f"Загальна сума заробітної плати: {total}, Середня заробітна плата: {average}")
+if __name__ == "__main__":
+    main()
